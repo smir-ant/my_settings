@@ -1,0 +1,247 @@
+#navigator-toolbox {
+	display: flex;
+	justify-content: start;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+#nav-bar {
+	order: 0;
+	padding: 12px 0 11px 88px !important;
+	background-color: transparent !important;
+}
+
+#titlebar {
+	order: 1;
+	flex: 1;
+}
+
+#TabsToolbar {
+	background: none !important;
+	padding: 0 80px 11px 0 !important;
+}
+
+:root {
+	--urlbar-min-height: max(30px, 1.4em) !important;
+	--tab-min-height: 30px !important;
+}
+
+
+
+/*---------- Urlbar ----------*/
+#urlbar[focused]>.urlbar-input-container {
+	outline: 4px solid var(--neptune-focused-urlbar-border-color) !important;
+	outline-offset: -2px !important;
+}
+
+#urlbar,
+#searchbar {
+	font-size: 1.03em !important;
+}
+
+#urlbar-container {
+	width: 320px !important;
+}
+
+#urlbar-container,
+.permission-popup-section {
+	padding: 0 !important;
+}
+
+.urlbar-input-container, .urlbar-input-container:hover {
+	background-color: color-mix(in srgb, currentColor 20%, transparent) !important;
+	border-radius: 7px !important;
+}
+
+#urlbar[breakout] {
+	height: 30px !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+	left: 0 !important;
+	width: 100% !important;
+
+	>.urlbar-input-container {
+		height: 30px !important;
+	}
+}
+
+.urlbar-input {
+	font-size: 12.5px !important;
+}
+
+#urlbar-zoom-button {
+	font-family: JetBrains Mono;
+	margin-inline: 2px !important;
+	padding: 2px 4px !important;
+}
+
+#urlbar-zoom-button:hover {
+	background-color: var(--toolbarbutton-hover-background) !important;
+}
+
+#permissions-granted-icon {
+	width: 12px !important;
+	height: 12px !important;
+}
+
+/*---------- Tabs Bar ----------*/
+#tabbrowser-tabs {
+	--tab-min-width: 36px !important;
+	--tab-loading-fill: var(--theme-primary-color) !important;
+	height: 30px !important;
+	margin: 0 !important;
+	border-inline-start: none !important;
+	
+	&[movingtab] {
+		padding: 0 !important;
+	}
+}
+
+.tabbrowser-tab {
+/*	background-image: none !important;*/
+	border-radius: 7px !important;
+	margin-inline-end: 3px !important;
+
+}
+
+.tab-background {
+	border-radius: 7px !important;
+	margin: 0 !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab .tab-background[selected] {
+	background-color: #696969 !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab .tab-background:not([selected]) {
+	background-color: rgba(71, 71, 71, 0.2) !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab:hover .tab-background:not([selected]) {
+	background-color: #37393D !important;
+}
+
+.tab-label {
+	font-size: 12.5px !important;
+}
+
+.tab-close-button {
+	display: none !important;
+}
+
+
+
+/*---------- Buttons ----------*/
+#back-button,
+#forward-button {
+	opacity: 0.8;
+	width: 40px;
+	height: 30px;
+	padding: 0 2px !important;
+}
+
+#PanelUI-button {
+	position: fixed;
+	right: 12px;
+}
+#PanelUI-menu-button {
+	padding: 0 2px !important;
+}
+
+#unified-extensions-button {
+	position: fixed;
+	right: 48px;
+}
+
+/*---------- Browser ----------*/
+:root[tabsintitlebar][inFullscreen] #nav-bar {
+	padding-left: 5px !important;
+}
+/* три точки слева */
+:root[tabsintitlebar] #titlebar {
+	will-change: unset !important;
+}
+
+@media (-moz-platform: macos) {
+	#TabsToolbar .titlebar-buttonbox-container {
+		visibility: visible;
+		position: absolute;
+		left: 7px;
+		top: 18px;
+	}
+}
+
+/*---------- Hidden elems nav ----------*/
+#scrollbutton-up,
+#scrollbutton-down,
+#private-browsing-indicator-with-label,
+#TabsToolbar .titlebar-spacer,
+#alltabs-button,
+#back-button[disabled],
+#forward-button[disabled],
+#reload-button, #stop-button, 
+#new-tab-button, #tabs-newtab-button {
+	display: none !important;
+}
+
+
+/*---------- Hidden adressbar nav ----------*/
+#blocked-permissions-container, 
+#reader-mode-button, #readinglist-addremove-button,
+#translations-button,
+#tracking-protection-icon-container,
+#identity-icon-box,
+#pageAction-urlbar-canvasblocker_kkapsner_de,
+#star-button-box,
+image.urlbar-go-button,
+#pageAction-urlbar-gitzip-firefox-addons_gitzip_org
+{
+	display: none !important;
+}
+
+/* выдача, для меня 100% useless */
+#urlbar-results {
+	display:none !important;
+   }
+
+#urlbar-input, #urlbar-container, .urlbar-input-box {
+	margin: 0;
+}
+
+#nav-bar-customization-target {
+	padding: 0;
+}
+
+#yet_another_speed_dial_conceptualspace_net-browser-action,  /* yet another speed dial */
+#firefox_tampermonkey_net-browser-action,  /* TamperMonkey */
+#canvasblocker_kkapsner_de-browser-action,  /* CanvasBlocker */
+#jid1-bofifl9vbdl2zq_jetpack-browser-action,  /*  */
+#woop-noopscoopsnsxq_jetpack-browser-action,  /* privacy possum */
+#atbc_easonwong-browser-action,  /* adaptive tab bar color */
+.unified-extensions-list,  /* gitzip и saveVkStory - неактивные */
+/*#2_0_disconnect_me-browser-action*/
+toolbaritem[data-extensionid="2.0@disconnect.me"],  /* disconnect | если брать id, то почему-то все выше расширения появляются  */
+#unified-extensions-manage-extensions,  /* manage extensions */
+#unified-extensions-view>toolbarseparator
+{
+	display: none !important;
+}
+
+
+
+
+
+/* чтобы в строке поиска не было прыжков при активации */
+.urlbar-input-container {
+	padding: 0 !important;
+}
+
+#identity-box {
+	margin: 0 !important;
+}
+
+/* отступ вправо у текста в поиске */
+.urlbar-input-box {
+	padding-left: 5px;
+}

@@ -1,0 +1,172 @@
+{
+  "editor.fontSize": 26,
+  "terminal.integrated.fontSize": 18,
+  "editor.fontFamily": "'Hack Nerd Font'",
+  "workbench.startupEditor": "none",
+  "files.autoSave": "afterDelay",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "editor.unicodeHighlight.allowedLocales": {
+    "ru": true
+  },
+  "editor.unicodeHighlight.includeStrings": false,
+  "sqlite3-editor.ui.minimizePanel": true,
+  "telemetry.telemetryLevel":"off",
+  "sqlite3-editor.telemetry":"deny",
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.iconTheme": "bearded-icons",
+  "workbench.productIconTheme": "bootstrap-product-icons",
+  "editor.minimap.enabled": false,
+  "workbench.tree.indent": 12,
+  "editor.glyphMargin": false, // уже строка с нумерацией строк
+  "breadcrumbs.enabled": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "explicit",
+  "editor.hover.delay": 1000,  // задержка в появлении подсказок
+  // этот блок ниже чтобы убрать подчеркивание в rust
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+        "*.mutable": {
+            "underline": false,
+        }
+    }
+  },
+  "animations.Install-Method": "Custom CSS and JS",
+  "apc.imports": [
+    "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.2/dist/updateHandler.js"
+  ],
+
+  "window.customTitleBarVisibility": "never",
+  "apc.electron": {
+    "titleBarStyle":"hidden",
+  },
+
+  "apc.font.family": "Roboto Mono",
+  "apc.listRow": {
+    "height": 25,
+    "fontSize": 15,
+    "lists": [
+      "explorer-folders-view",
+      "quick-input-list"
+    ]
+  },
+  "apc.header": {
+    "fontSize": 15  // чуть крупнее шрифт у вкладок
+  },
+  // "apc.statusBar": {  //  настройка позиционки самой нижней панели
+  //   "position":"editor-bottom"  // анимация маленько не столь плавная :(
+  // },
+
+
+  // === APC CUSTOM ===
+  "apc.stylesheet": {
+    "div.line-numbers": "margin-left: 15px",
+    "span.sticky-line-number-inner": "margin-left: 15px",
+    "div.inline-tabs-placeholder": "padding-right: 1.5vw",
+    ".lightBulbWidget.codicon.codicon-light-bulb": "opacity: 0",  // убираем лампочку-подсказку
+    // "footer.statusbar div#status\\.windowZoom": "background-color: #0000",  // с экранированием ибо id с точкой. гении... но это для лупы, по итогу я её скрыл
+  },
+
+
+  // === CSS CUSTOM ===
+  "workbench.colorCustomizations": {
+    // --- общее ---
+    "button.background": "#426bad",
+    "button.foreground": "#d1d1d1",
+    "button.hoverBackground": "#2F6CBB",
+    "textLink.activeForeground": "#3065b8",
+    "textLink.foreground": "#5180cb",
+    "focusBorder": "#0000",  // идиотское выделение всего
+
+    // --- верхняя часть ---
+    "editorGroupHeader.tabsBackground": "#1c1c1c",
+    "editorGroupHeader.border": "#1f1f1f",  // нижняя граница с вкладками
+    "scrollbar.shadow": "#11111150",  // тень липкого скрола
+    "tab.inactiveForeground": "#626262",
+    "tab.inactiveBackground": "#1c1c1c",
+    "tab.border": "#242424",  // между вкладками
+    "tab.lastPinnedBorder": "#235fbe",
+    "tab.activeBorderTop": "#235fbe",
+
+    // --- левая панель ---
+    "activityBar.border": "#0000",
+    "activityBar.background": "#1c1c1c",
+    "activityBar.foreground": "#9e9e9e",
+    "activityBar.inactiveForeground": "#484848",
+    "activityBarBadge.foreground": "#1c1c1c",
+    "activityBarBadge.background": "#626262",
+    "activityBar.activeBorder": "#426bad",
+    "badge.background": "#0000",
+    // боковая панель внутри
+    "sideBar.background": "#1c1c1c",
+    "sideBar.border": "#0000",
+    "sideBar.foreground": "#aaaaaa",
+    "sideBarSectionHeader.background": "#1c1c1c",
+    "sideBarSectionHeader.foreground": "#808080",
+    "sideBarSectionHeader.border": "#0000",
+    "sideBarTitle.foreground": "#0000",
+    // настройка цвета файлов-папок
+    "list.hoverBackground": "#2a2a2a",
+    "list.activeSelectionBackground": "#111111",  // когда выбираем что-то, и в окне проекта и например в подсказках в editor
+    "list.inactiveSelectionBackground": "#191919",
+    "list.activeSelectionForeground": "#f0f0f0",
+    "list.highlightForeground": "#53a7fb",
+    "list.warningForeground": "#a58a12",  // warning в списке файлов
+    "list.errorForeground": "#be6666",  // error в списке файлов
+    "gitDecoration.ignoredResourceForeground": "#595959",
+    "gitDecoration.untrackedResourceForeground": "#5d9b6c",
+
+    // --- editor ---
+    "editor.wordHighlightTextBackground": "#0000",  // самое уродское выделение(когда просто мышка на слове и ищутся попадения)
+    "editorOverviewRuler.wordHighlightTextForeground": "#0000",  // то же выделение, только в полосе прокрутки
+    "editor.background": "#1F1F1F",  // фон гл. редактора кода
+    "editor.foreground": "#CCCCCC",  // фон простых символов не по синтаксису
+    "editor.lineHighlightBackground": "#00000015",  // фоновая линия актуальной линии
+    "editor.selectionBackground": "#245da777",  // выделение
+    "editor.selectionHighlightBackground": "#a7c9ff1c", // все попадения при выделении
+    "editorLineNumber.activeForeground": "#959595",
+    "editorLineNumber.foreground": "#3b3b3b",
+    "editorStickyScrollHover.background": "#1F1F1F",
+    "editorBracketMatch.background": "#48484880",  // - парные скобки в которых ты сейчас - 
+    "editorBracketMatch.border": "#0000",  // - парные скобки в которых ты сейчас - 
+    "editorOverviewRuler.border": "#0000",   // линия между editor и полосой прокрутки
+    "editorCursor.foreground": "#ffcc00",  // палочка-курсор в editor
+    // "editorLightBulb.foreground": "#00000000",  // цвет лампочки-подсказчика. однако все равно пятно остаётся, поэтому через apc убрал
+    "editorIndentGuide.activeBackground1": "#505050", // Активная линия табуляции
+    "editorIndentGuide.background1": "#282828", // неактивные линии табуляции
+    "editorWidget.background": "#222222",  // всплывающий подсказчик фон
+    "editorWidget.border": "#323232",  // всплывающий подсказчик рамка
+    "scrollbarSlider.activeBackground": "#5F5F5F5F",  // полоса прокрутки когда активируешь
+    "scrollbarSlider.background": "#48484848",  // полоса прокрутки в пассивном режме
+    "scrollbarSlider.hoverBackground": "#4f4f4fa0",  // полоса прокрутки при наведении
+    // - git difference -
+    "diffEditor.insertedTextBackground": "#c3e88d15",
+    "diffEditor.removedTextBackground": "#ff537020",
+
+    // --- нижняя часть ---
+    "panel.background": "#1c1c1c",  // цвет панели с терминалом
+    "panel.border": "#21212160",
+    "panelTitle.activeBorder": "#426bad",
+    "terminal.border": "#0000",
+    "terminal.tab.activeBorder": "#426bad",
+    // - самая нижняя панель -
+    "statusBar.background": "#1c1c1c",
+    "statusBar.border": "#0000",
+    "statusBar.foreground": "#626262",
+    "statusBarItem.hoverBackground": "#0000",
+    "statusBarItem.hoverForeground": "#909090",
+    "statusBar.focusBorder": "#0000",  // какого-то черта тут свой цвет выделения. ладно
+  },
+  "animations.Enabled": true,
+  "vscode_custom_css.imports": [
+    "file:///Users/smir-ant/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
+  ],
+  "window.titleBarStyle": "native",
+  "markdown-preview-enhanced.previewTheme": "monokai.css",
+  "markdown-preview-enhanced.revealjsTheme": "none.css",
+  "markdown-preview-enhanced.enablePreviewZenMode": true,
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.location": "hidden",
+}
