@@ -29,18 +29,20 @@
 
 
 /*---------- Urlbar ----------*/
-#urlbar[focused]>.urlbar-input-container {
-	outline: 4px solid var(--neptune-focused-urlbar-border-color) !important;
-	outline-offset: -2px !important;
+#urlbar-container {
+	width: 200px !important;
+	transition: width 0.2s ease;
 }
+
+/* увеличения адресной строки при фокусе */
+#urlbar-container:has(#urlbar[focused]) {
+	width: 500px !important;
+}
+
 
 #urlbar,
 #searchbar {
 	font-size: 1.03em !important;
-}
-
-#urlbar-container {
-	width: 320px !important;
 }
 
 #urlbar-container,
