@@ -78,9 +78,6 @@
 	padding: 2px 4px !important;
 }
 
-#urlbar-zoom-button:hover {
-	background-color: var(--toolbarbutton-hover-background) !important;
-}
 
 #permissions-granted-icon {
 	width: 12px !important;
@@ -90,7 +87,7 @@
 /*---------- Tabs Bar ----------*/
 #tabbrowser-tabs {
 	--tab-min-width: 36px !important;
-	--tab-loading-fill: var(--theme-primary-color) !important;
+	--tab-loading-fill: lightblue !important;
 	height: 30px !important;
 	margin: 0 !important;
 	border-inline-start: none !important;
@@ -101,7 +98,6 @@
 }
 
 .tabbrowser-tab {
-/*	background-image: none !important;*/
 	border-radius: 7px !important;
 	margin-inline-end: 3px !important;
 
